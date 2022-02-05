@@ -8,6 +8,19 @@ app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
 
-app.get('/', (req,res) => {
-    res.send(`<h1>robbo was here</h1>`)
+app.get('/homepage', (req,res) => {
+    const rob = "is robby the best";
+    res.send(`
+    <style>
+    h1{
+        color:blue;
+    }
+    </style>
+    <html>
+    <body>
+    
+    <h1>robbo was here</h1>
+    <h2>${rob}</h2>
+    </body>
+    </html>`)
 })
